@@ -91,6 +91,9 @@ Steal ideas. Credit builders. Respect licenses. Build better.
 The Typeless alternative example can be turned into a visual report and a short
 video.
 
+- [Open the Typeless HTML Dashboard](https://lumpinif.github.io/steal-the-code/typeless-report.html)
+- [Open the Examples Page](https://lumpinif.github.io/steal-the-code/)
+
 [![Typeless precedent reel](assets/typeless-precedent-reel-contact-sheet.png)](assets/typeless-precedent-reel.mp4)
 
 Click the preview to open the MP4. GitHub README files do not reliably render
@@ -205,4 +208,7 @@ scripts/
 examples/
   typeless-candidates.json
   typeless-report.json
+docs/
+  index.html
+  typeless-report.html
 ```
