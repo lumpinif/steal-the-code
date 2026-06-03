@@ -1,5 +1,7 @@
 # Steal the Code
 
+[![skills.sh](https://skills.sh/b/lumpinif/steal-the-code)](https://skills.sh/lumpinif/steal-the-code)
+
 Ask your agent to steal the code first, then build something better.
 
 Steal the Code is a skill for agentic coding. Before an agent designs or builds
