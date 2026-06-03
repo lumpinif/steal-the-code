@@ -76,8 +76,8 @@ handing off to another agent, Steal the Code can also produce richer artifacts.
   Use this when you want a durable visual brief for yourself, a team, or another
   agent.
 - **Precedent Reel**: a short HyperFrames or Remotion video that turns the same
-  report into a shareable walkthrough. Use this when you want to explain the
-  idea publicly or show why the precedent set changes the implementation plan.
+  report into a shareable walkthrough. The agent chooses HyperFrames for fast
+  HTML-first reels and Remotion for React-first reusable video systems.
 - **Candidate JSON**: the source of truth for the brief, dashboard, and reel, so
   later agents can continue from the same evidence instead of rerunning the
   research from scratch.

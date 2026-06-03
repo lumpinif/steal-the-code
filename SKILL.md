@@ -72,7 +72,13 @@ Always include:
 Offer these when useful:
 
 - **HTML Dashboard** for visual comparison and sharing.
-- **Precedent Reel** for short-form demos using HyperFrames or Remotion.
+- **Precedent Reel** for short-form demos. Do not treat video generation as a
+  built-in dependency. If the environment has video skills or tools available,
+  choose the best fit:
+  - Use **HyperFrames** for fast HTML-first explainers, dashboard-to-video
+    walkthroughs, and short social reels.
+  - Use **Remotion** for React-first video projects, reusable templates,
+    parameterized compositions, or a larger programmatic video system.
 - **Candidate JSON** for another agent to continue the work from the same source
   of truth.
 

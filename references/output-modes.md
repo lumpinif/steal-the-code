@@ -72,8 +72,20 @@ Recommended structure:
 7. Final recommendation
 ```
 
-HyperFrames is the preferred first version because the report already maps well
-to HTML. Remotion is better for a larger reusable video-template system.
+Choose the video tool by fit, not by default.
+
+- **HyperFrames**: use for fast HTML-first reels, animated report walkthroughs,
+  captions, narration, and social sharing. It is usually the best choice when
+  the source report is already an HTML dashboard or structured JSON.
+- **Remotion**: use for React-first video projects, reusable video templates,
+  parameterized compositions, stronger asset pipelines, or a long-term
+  programmatic video system.
+- **Neither available**: state that video generation is not available in the
+  current environment. Keep the candidate JSON and HTML dashboard as the source
+  of truth, and provide a storyboard only when useful.
+
+If the user names HyperFrames or Remotion, use the named tool unless it is not
+available.
 
 ## Candidate JSON
 
@@ -91,4 +103,3 @@ The JSON should include:
 - generated outputs
 
 See [precedent-report.schema.json](../templates/precedent-report.schema.json).
-
