@@ -53,14 +53,35 @@ npx skills use lumpinif/steal-the-code@steal-the-code
 
 ## What It Does
 
-- Decomposes an idea into searchable product, architecture, workflow, and
-  implementation intent.
-- Searches for skill, repo, product, community, and code precedents.
-- Ranks candidates by practical fit, not just popularity.
-- Deep-reads the best open-source examples.
-- Produces a `Use / Borrow / Avoid / Build New` decision.
-- Carries credits, license notes, and constraints into the next coding step.
-- Optionally generates an HTML dashboard or short precedent reel for sharing.
+Steal the Code is a precedent pipeline for coding agents.
+
+1. **Decompose the idea**  
+   Turns a vague request into product, workflow, architecture, implementation,
+   analogy, and negative keywords. This prevents the agent from searching one
+   weak phrase and missing the real category.
+
+2. **Mine real-world language**  
+   Uses skills, GitHub, Hacker News, docs, and public web signals to learn how
+   builders and users describe similar problems.
+
+3. **Find public precedents**  
+   Uses no-login tools first: GitHub public repo search for candidates,
+   Sourcegraph public search for code-level evidence, HN Algolia for community
+   signals, and skills.sh for existing agent workflows.
+
+4. **Rank by practical fit**  
+   Re-ranks candidates with BM25-style local keyword matching and evidence
+   review. Fit to the user's workflow and implementation shape matters more
+   than stars.
+
+5. **Deep-read the winners**  
+   Reads the best repos with README/docs, raw GitHub files, Repomix, DeepWiki,
+   or local code search to understand what the project is really doing.
+
+6. **Turn evidence into a build decision**  
+   Produces `Use / Borrow / Avoid / Build New`, credits and license notes, and
+   concrete constraints for the next coding step. Optional outputs include an
+   HTML dashboard, a short precedent reel, and candidate JSON.
 
 ## Optional Outputs
 
