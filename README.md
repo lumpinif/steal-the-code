@@ -11,6 +11,24 @@ This is not about stealing private code or ignoring licenses. It is about making
 agents learn from public builders instead of inventing worse versions of things
 that already exist.
 
+## Why
+
+Coding agents can be very good at local implementation and still make weak
+product, architecture, or workflow decisions. When they only see the current
+prompt and codebase, they often invent designs that look reasonable but are not
+how real people expect the product to work.
+
+The best correction signal is usually already public: open-source repos, skills,
+launch posts, docs, and community discussions from builders who solved adjacent
+problems before. Those precedents show what actually worked, what was overbuilt,
+what users cared about, and what implementation shape survived contact with
+reality.
+
+Steal the Code turns that evidence into a required step before building. It
+makes the agent decompose the idea, find real precedents, read the closest ones,
+decide what to use, borrow, avoid, or build new, and carry credits and license
+constraints into implementation.
+
 ## Install
 
 ```bash
