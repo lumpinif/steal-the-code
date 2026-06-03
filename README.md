@@ -11,33 +11,16 @@ This is not about stealing private code or ignoring licenses. It is about making
 agents learn from public builders instead of inventing worse versions of things
 that already exist.
 
-## Core Use Case
+## Why You Need It
 
-When you are building something, ask the agent to study the public repos that
-already solved most of the problem. Those projects can give the agent better
-product instincts, cleaner architecture, proven implementation patterns, and a
-clearer sense of what to avoid.
-
-That extra context is the point. The agent is no longer designing from a prompt
-alone. It is building with real open-source precedent in view.
-
-## Why
-
-Coding agents can be very good at local implementation and still make weak
-product, architecture, or workflow decisions. When they only see the current
-prompt and codebase, they often invent designs that look reasonable but are not
-how real people expect the product to work.
-
-The best correction signal is usually already public: open-source repos, skills,
-launch posts, docs, and community discussions from builders who solved adjacent
-problems before. Those precedents show what actually worked, what was overbuilt,
-what users cared about, and what implementation shape survived contact with
-reality.
-
-Steal the Code turns that evidence into a required step before building. It
-makes the agent decompose the idea, find real precedents, read the closest ones,
-decide what to use, borrow, avoid, or build new, and carry credits and license
-constraints into implementation.
+- **Problem**: agents can code well, but still make weak product, architecture,
+  and workflow decisions.
+- **Missing context**: the agent only sees your prompt and current codebase,
+  while the best public precedents are scattered across repos, skills, docs,
+  launches, and community threads.
+- **Fix**: make the agent study those precedents before it builds.
+- **Result**: better product instincts, cleaner architecture, proven patterns,
+  clear things to avoid, and a higher chance of building something better.
 
 ## Install
 
