@@ -11,6 +11,21 @@
     "summary": {
       "type": "string"
     },
+    "productReference": {
+      "type": "object",
+      "required": ["name", "url"],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        },
+        "role": {
+          "type": "string"
+        }
+      }
+    },
     "queryFamilies": {
       "type": "object",
       "additionalProperties": {

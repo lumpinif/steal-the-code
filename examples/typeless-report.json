@@ -1,5 +1,10 @@
 {
   "intent": "Build a free, open-source Typeless alternative.",
+  "productReference": {
+    "name": "Typeless",
+    "url": "https://www.typeless.com/",
+    "role": "Commercial product reference for the open-source alternative idea."
+  },
   "summary": "The precedent set shows this should be a full voice-to-polished-text workflow, not a simple Whisper wrapper.",
   "queryFamilies": {
     "product": [

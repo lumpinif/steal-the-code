@@ -46,6 +46,10 @@ Intent:
 Build a free, open-source Typeless alternative.
 ```
 
+Product reference:
+
+- [Typeless](https://www.typeless.com/)
+
 The skill expands the idea into query families:
 
 ```text
@@ -62,21 +66,25 @@ no subscription
 
 It finds projects such as:
 
-- `Open-Less/openless`
-- `TypeWhisper/typewhisper-mac`
-- `hehehai/voxt`
-- `never13254/GhostType`
-- `DoodzProg/AcouZ`
+- [Open-Less/openless](https://github.com/Open-Less/openless)
+- [TypeWhisper/typewhisper-mac](https://github.com/TypeWhisper/typewhisper-mac)
+- [hehehai/voxt](https://github.com/hehehai/voxt)
+- [never13254/GhostType](https://github.com/never13254/GhostType)
+- [DoodzProg/AcouZ](https://github.com/DoodzProg/AcouZ)
 
 Then it turns the precedent set into a coding recommendation:
 
-```text
-Use OpenLess as the closest full-product reference.
-Borrow TypeWhisper's local engine/plugin direction.
-Borrow Voxt and GhostType's app-aware prompt routing.
-Avoid building only a Whisper wrapper.
-Build new only with a clear differentiated focus.
-```
+- Use [OpenLess](https://github.com/Open-Less/openless) as the closest
+  full-product reference.
+- Borrow [TypeWhisper](https://github.com/TypeWhisper/typewhisper-mac)'s local
+  engine/plugin direction.
+- Borrow [Voxt](https://github.com/hehehai/voxt) and
+  [GhostType](https://github.com/never13254/GhostType)'s app-aware prompt
+  routing.
+- Reference [AcouZ](https://github.com/DoodzProg/AcouZ) for a minimal Windows
+  path.
+- Avoid building only a Whisper wrapper.
+- Build new only with a clear differentiated focus.
 
 ## No-Login Default Toolchain
 
@@ -140,4 +148,3 @@ examples/
   typeless-candidates.json
   typeless-report.json
 ```
-
