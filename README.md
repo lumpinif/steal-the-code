@@ -11,6 +11,16 @@ This is not about stealing private code or ignoring licenses. It is about making
 agents learn from public builders instead of inventing worse versions of things
 that already exist.
 
+## Core Use Case
+
+When you are building something, ask the agent to study the public repos that
+already solved most of the problem. Those projects can give the agent better
+product instincts, cleaner architecture, proven implementation patterns, and a
+clearer sense of what to avoid.
+
+That extra context is the point. The agent is no longer designing from a prompt
+alone. It is building with real open-source precedent in view.
+
 ## Why
 
 Coding agents can be very good at local implementation and still make weak
@@ -52,9 +62,35 @@ npx skills use lumpinif/steal-the-code@steal-the-code
 - Carries credits, license notes, and constraints into the next coding step.
 - Optionally generates an HTML dashboard or short precedent reel for sharing.
 
+## Optional Outputs
+
+The default output is a concise chat brief. When the result is worth sharing or
+handing off to another agent, Steal the Code can also produce richer artifacts.
+
+- **HTML Dashboard**: a single local HTML file that compares candidates by fit,
+  source, license, platform, takeaways, and `Use / Borrow / Avoid / Build New`.
+  Use this when you want a durable visual brief for yourself, a team, or another
+  agent.
+- **Precedent Reel**: a short HyperFrames or Remotion video that turns the same
+  report into a shareable walkthrough. Use this when you want to explain the
+  idea publicly or show why the precedent set changes the implementation plan.
+- **Candidate JSON**: the source of truth for the brief, dashboard, and reel, so
+  later agents can continue from the same evidence instead of rerunning the
+  research from scratch.
+
 ## Core Principle
 
 Steal ideas. Credit builders. Respect licenses. Build better.
+
+## Example Showcase
+
+The Typeless alternative example can be turned into a visual report and a short
+video.
+
+[![Typeless precedent reel](assets/typeless-precedent-reel-contact-sheet.png)](assets/typeless-precedent-reel.mp4)
+
+Click the preview to open the MP4. GitHub README files do not reliably render
+repo-hosted videos inline, so the screenshot acts as a stable preview.
 
 ## Example
 
