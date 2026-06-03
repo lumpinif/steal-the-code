@@ -1,0 +1,143 @@
+# Steal the Code
+
+Ask your agent to steal the code first, then build something better.
+
+Steal the Code is a skill for agentic coding. Before an agent designs or builds
+a product, feature, module, system, or another skill, it finds real public
+open-source precedents, studies what works, and turns that evidence into a
+practical implementation plan.
+
+This is not about stealing private code or ignoring licenses. It is about making
+agents learn from public builders instead of inventing worse versions of things
+that already exist.
+
+## Install
+
+```bash
+npx skills add lumpinif/steal-the-code
+```
+
+Use without installing:
+
+```bash
+npx skills use lumpinif/steal-the-code@steal-the-code
+```
+
+## What It Does
+
+- Decomposes an idea into searchable product, architecture, workflow, and
+  implementation intent.
+- Searches for skill, repo, product, community, and code precedents.
+- Ranks candidates by practical fit, not just popularity.
+- Deep-reads the best open-source examples.
+- Produces a `Use / Borrow / Avoid / Build New` decision.
+- Carries credits, license notes, and constraints into the next coding step.
+- Optionally generates an HTML dashboard or short precedent reel for sharing.
+
+## Core Principle
+
+Steal ideas. Credit builders. Respect licenses. Build better.
+
+## Example
+
+Intent:
+
+```text
+Build a free, open-source Typeless alternative.
+```
+
+The skill expands the idea into query families:
+
+```text
+AI dictation
+voice input in any app
+hold hotkey, speak, release
+polished text
+Whisper / local ASR
+LLM cleanup
+personal dictionary
+app-specific prompt routing
+no subscription
+```
+
+It finds projects such as:
+
+- `Open-Less/openless`
+- `TypeWhisper/typewhisper-mac`
+- `hehehai/voxt`
+- `never13254/GhostType`
+- `DoodzProg/AcouZ`
+
+Then it turns the precedent set into a coding recommendation:
+
+```text
+Use OpenLess as the closest full-product reference.
+Borrow TypeWhisper's local engine/plugin direction.
+Borrow Voxt and GhostType's app-aware prompt routing.
+Avoid building only a Whisper wrapper.
+Build new only with a clear differentiated focus.
+```
+
+## No-Login Default Toolchain
+
+The default workflow prefers tools that an agent can run without user login or
+API keys:
+
+- GitHub public repository search
+- GitHub public contents/raw APIs
+- Hacker News Algolia API
+- Sourcegraph public Stream API
+- Repomix
+- DeepWiki MCP when available
+- Local BM25-style candidate ranking
+
+API-key tools such as Exa, Tavily, Firecrawl, and Reposeek can be used as
+enhancements, but they are not required.
+
+## Scripts
+
+The scripts are dependency-free Node.js tools for agents.
+
+```bash
+node scripts/github-repo-search.mjs "open source typeless alternative AI dictation" --limit 10
+node scripts/hn-search.mjs "Typeless open source dictation" --limit 10
+node scripts/sourcegraph-search.mjs '"global hotkey" "transcribe" "paste" lang:Swift count:20'
+node scripts/rank-candidates.mjs --query "free open source typeless alternative AI dictation" --input examples/typeless-candidates.json --fetch-readme
+node scripts/render-html-report.mjs --input examples/typeless-report.json --out outputs/typeless-report.html
+```
+
+## Responsible Use
+
+Steal the Code should always surface:
+
+- The source projects used.
+- The relevant license for each repo.
+- Whether direct code reuse is license-compatible.
+- What should be credited in docs, README, or release notes.
+- What should be borrowed as an idea instead of copied as code.
+
+If an agent borrows code directly, it must preserve required attribution and
+follow the license terms. If license compatibility is unclear, treat the project
+as inspiration only until a human verifies it.
+
+## Repository Layout
+
+```text
+SKILL.md
+references/
+  toolchain.md
+  output-modes.md
+  credits-and-licenses.md
+templates/
+  precedent-report.schema.json
+scripts/
+  github-repo-search.mjs
+  hn-search.mjs
+  sourcegraph-search.mjs
+  rank-candidates.mjs
+  render-html-report.mjs
+examples/
+  typeless-candidates.json
+  typeless-report.json
+```
+
