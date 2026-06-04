@@ -50,9 +50,10 @@ Steal the Code is a precedent pipeline for coding agents.
    builders and users describe similar problems.
 
 3. **Find public precedents**  
-   Uses no-login tools first: GitHub public repo search for candidates,
-   Sourcegraph public search for code-level evidence, HN Algolia for community
-   signals, and skills.sh for existing agent workflows.
+   Uses no-login tools first: open-source alternative directories for seed
+   candidates, GitHub public repo search for repositories, Sourcegraph public
+   search for code-level evidence, HN Algolia for community signals, and
+   skills.sh for existing agent workflows.
 
 4. **Rank by practical fit**  
    Re-ranks candidates with BM25-style local keyword matching and evidence
@@ -156,6 +157,7 @@ API keys:
 
 - GitHub public repository search
 - GitHub public contents/raw APIs
+- Public open-source alternative directories
 - Hacker News Algolia API
 - Sourcegraph public Stream API
 - Repomix
@@ -170,12 +172,17 @@ enhancements, but they are not required.
 The scripts are dependency-free Node.js tools for agents.
 
 ```bash
+node scripts/oss-directory-search.mjs "notion" --limit 10
 node scripts/github-repo-search.mjs "open source typeless alternative AI dictation" --limit 10
 node scripts/hn-search.mjs "Typeless open source dictation" --limit 10
 node scripts/sourcegraph-search.mjs '"global hotkey" "transcribe" "paste" lang:Swift count:20'
 node scripts/rank-candidates.mjs --query "free open source typeless alternative AI dictation" --input examples/typeless-candidates.json --fetch-readme
 node scripts/render-html-report.mjs --input examples/typeless-report.json --out outputs/typeless-report.html
 ```
+
+Directory results are seed leads, not proof. Before using a candidate, verify
+its GitHub repository, license, maintenance recency, README/docs, and code-level
+evidence.
 
 ## Responsible Use
 
@@ -202,6 +209,7 @@ references/
 templates/
   precedent-report.schema.json
 scripts/
+  oss-directory-search.mjs
   github-repo-search.mjs
   hn-search.mjs
   sourcegraph-search.mjs

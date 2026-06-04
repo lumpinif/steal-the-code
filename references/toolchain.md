@@ -34,6 +34,37 @@ Search multiple query families:
 - Analogy terms
 - Negative terms to filter later
 
+### Open-Source Alternative Directories
+
+Use these when the user names a product, SaaS, or product category and wants an
+open-source replacement target. They are best for candidate recall and product
+vocabulary, not final evidence.
+
+```bash
+node scripts/oss-directory-search.mjs "notion" --limit 20
+node scripts/oss-directory-search.mjs "google analytics" --sources ossfind,ossreplace --limit 10
+```
+
+The default script reads public, agent-friendly surfaces:
+
+- OSSAlt search pages.
+- OpenAlternative `llms.txt`.
+- Open Source Alternatives `llms-full.txt`.
+- OSSFind `/alternatives/<saas-slug>/` pages.
+- ossreplace `/alternatives/<saas-slug>/` pages.
+
+Rules:
+
+- Treat directory results as candidate seeds only.
+- Prefer `llms.txt`, `llms-full.txt`, sitemaps, static search pages, and public
+  HTML that the site intentionally exposes.
+- Respect robots rules. Do not crawl disallowed private APIs.
+- If a site advertises an API, verify the endpoint live before depending on it.
+- Verify every serious candidate with GitHub repo metadata, README/docs,
+  license, maintenance recency, and code evidence.
+- Treat AI-generated feature parity, health scores, and cost estimates as
+  ranking hints, not facts.
+
 ### Community and Product Vocabulary
 
 Use HN Algolia to learn how real builders and users describe the idea.
@@ -120,4 +151,3 @@ Use these in order:
 
 Stars are a weak signal. A 30-star repo with the exact workflow can be more
 useful than a 10,000-star library that only matches one keyword.
-

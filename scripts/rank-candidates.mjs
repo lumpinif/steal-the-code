@@ -105,12 +105,18 @@ function documentText(candidate, readmeText = "") {
   return [
     candidate.fullName,
     candidate.full_name,
+    candidate.githubRepo,
+    candidate.directoryUrl,
     candidate.name,
     candidate.description,
     candidate.language,
     candidate.license,
     candidate.license?.spdx_id,
+    candidate.evidence,
     ...(candidate.topics || []),
+    ...(candidate.tags || []),
+    ...(candidate.categories || []),
+    ...(candidate.alternativeTo || []),
     readmeText.slice(0, 20000),
   ]
     .filter(Boolean)
@@ -176,6 +182,8 @@ async function main() {
     rank: index + 1,
     fullName: item.fullName,
     url: item.candidate.url || item.candidate.html_url,
+    directoryUrl: item.candidate.directoryUrl || null,
+    sourceType: item.candidate.sourceType || null,
     description: item.candidate.description || null,
     stars: item.candidate.stars ?? item.candidate.stargazers_count ?? null,
     forks: item.candidate.forks ?? item.candidate.forks_count ?? null,
@@ -184,6 +192,10 @@ async function main() {
         ? item.candidate.license.spdx_id
         : item.candidate.license ?? null,
     topics: item.candidate.topics || [],
+    tags: item.candidate.tags || [],
+    categories: item.candidate.categories || [],
+    alternativeTo: item.candidate.alternativeTo || [],
+    verificationRequired: item.candidate.verificationRequired || false,
     pushedAt: item.candidate.pushedAt || item.candidate.pushed_at || null,
     bm25Score: Number(item.bm25Score.toFixed(3)),
     fitPercent: Math.round((item.bm25Score / maxScore) * 100),
@@ -209,4 +221,3 @@ main().catch((error) => {
   console.error(error.message);
   process.exit(1);
 });
-

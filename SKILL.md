@@ -23,6 +23,9 @@ turn the lessons into a better implementation plan.
 2. **Route precedent lanes**
    - Skill precedents: search existing skills when the user may need a workflow
      or agent capability.
+   - Open-source alternative directories: when the user names a product, SaaS,
+     or category and wants an open-source replacement, use public alternative
+     directories as candidate seed sources.
    - Repo precedents: search public GitHub repositories for open-source systems,
      modules, and implementation patterns.
    - Product/community precedents: search HN or the web for real-world naming,
@@ -38,6 +41,8 @@ turn the lessons into a better implementation plan.
 
 4. **Read the best candidates**
    - Start with README, topics, license, stars, forks, update recency, and docs.
+   - Treat directory results as leads only. Verify the GitHub repo, license,
+     maintenance, and real code before using or borrowing from a candidate.
    - Deep-read only the most relevant projects.
    - Use Repomix, DeepWiki, local code search, or direct repo inspection when
      the candidate is likely to shape implementation.
