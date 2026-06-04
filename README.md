@@ -2,6 +2,26 @@
 
 [![skills.sh](https://skills.sh/b/lumpinif/steal-the-code)](https://skills.sh/lumpinif/steal-the-code)
 
+## Moved to Find OSS Alternative
+
+This project is now legacy and may no longer receive active updates.
+
+Use the maintained skill instead:
+
+```bash
+npx skills add lumpinif/find-oss-alternative
+```
+
+Use without installing:
+
+```bash
+npx skills use lumpinif/find-oss-alternative@find-oss-alternative
+```
+
+Repository: [lumpinif/find-oss-alternative](https://github.com/lumpinif/find-oss-alternative)
+
+---
+
 Ask your agent to steal the code first, then build something better.
 
 Steal the Code is a skill for agentic coding. Before an agent designs or builds

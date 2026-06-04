@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": false,
   "type": "module",
-  "description": "Ask your agent to steal the code first, then build something better.",
+  "description": "Legacy wrapper for Find OSS Alternative.",
   "license": "MIT",
   "scripts": {
     "search:repos": "node scripts/github-repo-search.mjs",
